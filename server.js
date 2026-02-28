@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
-import { PORT } from "./config/env.js";
+
 import { globalErrorHandler } from "./middlewares/globalErroHandler.js";
 import {
   createTables,
@@ -136,6 +136,8 @@ app.use(
 
 // Error handler (must be last)
 app.use(globalErrorHandler);
+
+const PORT = process.env.PORT || 3000;
 
 // Initialize database and start server
 const startServer = async () => {
