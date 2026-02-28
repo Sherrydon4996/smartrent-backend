@@ -3,11 +3,11 @@ import twilio from "twilio";
 import {
   TWILIO_ACCOUNT_SID,
   TWILIO_AUTH_TOKEN,
-  TWILIO_PHONE_NUMBER,
   RESEND_API_KEY,
 } from "../../config/env.js";
 
 import { Resend } from "resend"; // npm install resend
+const TWILIO_PHONE_NUMBERb = "0711140899";
 
 const resend = new Resend(RESEND_API_KEY);
 

@@ -151,8 +151,8 @@ const startServer = async () => {
     console.log("✅ Penalty calculation cron job initialized");
 
     // Start the Express server
-    app.listen(PORT, () => {
-      console.log(`🚀 Server is running at http://localhost:${PORT}`);
+    app.listen(PORT, "0.0.0.0", () => {
+      console.log(`🚀 Server running at on port ${PORT}`);
       console.log(
         `📊 Automatic penalty calculation is active (runs daily at 12:01 AM)`,
       );
